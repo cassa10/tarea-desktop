@@ -1,0 +1,11 @@
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\bin\Debug\tarea-desktop.exe.config
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\bin\Debug\tarea-desktop.exe
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\bin\Debug\tarea-desktop.pdb
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.csprojAssemblyReference.cache
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.Form1.resources
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.Properties.Resources.resources
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.csproj.GenerateResource.cache
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.csproj.CoreCompileInputs.cache
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.exe
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.pdb
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.Form2.resources
