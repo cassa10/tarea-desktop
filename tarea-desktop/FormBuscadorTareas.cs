@@ -15,24 +15,14 @@ namespace tarea_desktop
     public partial class FormBuscadorTareas : Form
     {
         public List<Tarea> tareas;
+        public Usuario user;
         
-        public FormBuscadorTareas()
+        public FormBuscadorTareas(Usuario user)
         {
             InitializeComponent();
-            Cursor.Current = Cursors.WaitCursor;
-            RESTClient httpClient = new RESTClient("http://localhost:8080/tareas", httpVerb.GET);
-            string response = httpClient.makeRequest();
-            if (httpClient.errorRequest) {
-                new FormErrorResponse().Show();
-            } else
-            {
-                Cursor.Current = Cursors.Default;
-                tareas = JsonConvert.DeserializeObject<List<Tarea>>(response);
-
-                tableTarea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                tableTarea.DataSource = tareas;
-
-            }
+            this.searchTareas();
+            this.user = user;
+            usernameLabel.Text = user.username;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -57,7 +47,7 @@ namespace tarea_desktop
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,6 +70,58 @@ namespace tarea_desktop
         private bool allPriority()
         {
             return priorityBox.Text.Equals("Prioridad") || priorityBox.Text.Equals("Todas");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.searchTareas();
+        }
+
+        private void searchTareas()
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            RESTClient httpClient = new RESTClient("http://localhost:8080/tareas", httpVerb.GET);
+            string response = httpClient.makeRequest();
+            if (httpClient.errorRequest)
+            {
+                new FormErrorResponse(httpClient.errorMessage).Show();
+            }
+            else
+            {
+                Cursor.Current = Cursors.Default;
+                tareas = JsonConvert.DeserializeObject<List<Tarea>>(response);
+
+                tableTarea.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                tableTarea.DataSource = tareas;
+                searchText.Text = "";
+                priorityBox.Text = "Prioridad";
+
+            }
+        }
+
+        private void tableTarea_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Tarea pe = (Tarea)tableTarea.CurrentRow.DataBoundItem;
+
+
+        }
+
+        private void tableTarea_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var tasksForm = new FormLogin();
+            tasksForm.Closed += (s, args) => this.Close();
+            tasksForm.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,7 @@ C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\bin\Debug\System.
 C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.csproj.App.config
 C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea-desktop.csproj.CopyComplete
 C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.FormErrorResponse.resources
-C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.FormErrorInputLogin.resources
 C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.FormLogin.resources
 C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.FormBuscadorTareas.resources
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.FormSignup.resources
+C:\Users\jose.cassano\source\repos\tarea-desktop\tarea-desktop\obj\Debug\tarea_desktop.FormErrorInput.resources

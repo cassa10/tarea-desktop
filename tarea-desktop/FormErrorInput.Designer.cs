@@ -1,6 +1,6 @@
 ﻿namespace tarea_desktop
 {
-    partial class FormErrorInputLogin
+    partial class FormErrorInput
     {
         /// <summary>
         /// Required designer variable.

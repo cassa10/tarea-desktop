@@ -12,9 +12,18 @@ namespace tarea_desktop
 {
     public partial class FormErrorResponse : Form
     {
-        public FormErrorResponse()
+        public string errorMessage { get; set; }
+        public FormErrorResponse(string errorMessage)
         {
             InitializeComponent();
+            this.errorMessage = errorMessage;
+
+            string showMessage = errorMessage.Substring(48);
+            showMessage = showMessage.Substring(0,showMessage.LastIndexOf('.'));
+
+            if (! errorMessage[49].Equals('5'))
+                errorLabel.Text = showMessage;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,5 +32,10 @@ namespace tarea_desktop
         }
 
         private void button1_Click(object sender, EventArgs e) => this.Close();
+
+        private void FormErrorResponse_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

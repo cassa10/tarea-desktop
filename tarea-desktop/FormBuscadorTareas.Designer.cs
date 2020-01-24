@@ -34,6 +34,10 @@
             this.priorityBox = new System.Windows.Forms.ComboBox();
             this.tableTarea = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +51,7 @@
             // 
             // searchText
             // 
-            this.searchText.Location = new System.Drawing.Point(270, 65);
+            this.searchText.Location = new System.Drawing.Point(271, 58);
             this.searchText.Name = "searchText";
             this.searchText.Size = new System.Drawing.Size(454, 20);
             this.searchText.TabIndex = 1;
@@ -55,7 +59,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(82, 65);
+            this.button1.Location = new System.Drawing.Point(83, 58);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 23);
             this.button1.TabIndex = 3;
@@ -71,7 +75,7 @@
             "Baja",
             "Media",
             "Todas"});
-            this.priorityBox.Location = new System.Drawing.Point(178, 65);
+            this.priorityBox.Location = new System.Drawing.Point(179, 58);
             this.priorityBox.Name = "priorityBox";
             this.priorityBox.Size = new System.Drawing.Size(86, 21);
             this.priorityBox.TabIndex = 4;
@@ -92,18 +96,59 @@
             this.descripcionDataGridViewTextBoxColumn,
             this.prioridadDataGridViewTextBoxColumn});
             this.tableTarea.DataSource = this.tareaBindingSource;
-            this.tableTarea.Location = new System.Drawing.Point(82, 115);
+            this.tableTarea.Location = new System.Drawing.Point(83, 97);
             this.tableTarea.Name = "tableTarea";
             this.tableTarea.ReadOnly = true;
             this.tableTarea.Size = new System.Drawing.Size(642, 266);
             this.tableTarea.TabIndex = 2;
+            this.tableTarea.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableTarea_CellClick);
             this.tableTarea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.tableTarea.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableTarea_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "prioridad";
             this.dataGridViewTextBoxColumn1.HeaderText = "Prioridad";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(83, 382);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Reiniciar/Actualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(626, 20);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(99, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Cerrar Sesion";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(80, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Usuario: ";
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(136, 25);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(16, 13);
+            this.usernameLabel.TabIndex = 8;
+            this.usernameLabel.Text = "...";
+            this.usernameLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -145,11 +190,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 411);
+            this.Controls.Add(this.usernameLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.priorityBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableTarea);
             this.Controls.Add(this.searchText);
+            this.MaximumSize = new System.Drawing.Size(816, 450);
+            this.MinimumSize = new System.Drawing.Size(816, 450);
             this.Name = "FormBuscadorTareas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tareas";
@@ -175,5 +226,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prioridadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label usernameLabel;
     }
 }

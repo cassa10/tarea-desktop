@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace tarea_desktop
 {
-    public partial class FormErrorInputLogin : Form
+    public partial class FormErrorInput : Form
     {
-        public FormErrorInputLogin()
+        public FormErrorInput()
         {
             InitializeComponent();
         }
